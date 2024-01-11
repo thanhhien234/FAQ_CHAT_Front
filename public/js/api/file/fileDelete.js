@@ -4,11 +4,7 @@ async function deleteFile(fileIdList) {
         type: 'DELETE',
         headers: {
             Authorization: "Bearer " + getCookie("accessToken")
-        },
-        data: JSON.stringify({
-            fileIdList: fileIdList,
-        }),
-        
+        },       
         success: function(response) {
             console.log('Delete File success');
         },

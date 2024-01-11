@@ -5,10 +5,6 @@ async function modifyFile(fileId, name) {
         headers: {
             Authorization: "Bearer " + getCookie("accessToken")
         },
-        data: JSON.stringify({
-            fileId: fileId,
-            name: name,
-        }),
         success: function(response) {
             console.log('Modify File success');
         },
