@@ -16,6 +16,7 @@ aside {
     padding: 25px;
     color: white;
     position: relative;
+    z-index: 2;   /*aside-container is on top of chat-blind-container*/
 }
 
 .aside-toggle {
