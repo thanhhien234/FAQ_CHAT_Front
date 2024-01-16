@@ -88,6 +88,7 @@
     max-width: 50%;
     margin-top: auto;
     width: fit-content;
+    margin-bottom: 10px;
 }
 .question-container{
     margin-left: auto;
@@ -138,4 +139,24 @@
 .date:first-child {
   margin-top: 150px;
   margin-bottom: 10px;
+}
+
+/* mobile screen */
+@media screen and (max-width: 900px) {
+  .question-container,
+  .answer-container {
+    max-width: 80%;
+  }
+  .instructor-message-container,
+  .chatbot-message-container {
+    width: 90%;
+  }
+  .input-chat-inner {
+    height: 40px;
+    padding: 2px;
+    width: 90%;
+  }
+  .input-chat-container{
+    height: 10%;
+  }
 }
