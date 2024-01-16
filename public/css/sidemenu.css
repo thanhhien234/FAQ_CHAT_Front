@@ -16,7 +16,7 @@ aside {
     padding: 25px;
     color: white;
     position: relative;
-    z-index: 2;   /*aside-container is on top of chat-blind-container*/
+    z-index: 300;   /*aside-container is on top of chat-blind-container*/
 }
 
 .aside-toggle {
@@ -47,9 +47,6 @@ aside {
     overflow: hidden;
     flex-wrap: nowrap;
     justify-content: start;
-}
-
-.aside-menus > li:hover {
     cursor: pointer;
 }
 
@@ -113,4 +110,10 @@ aside {
 
 .close > .aside-container > .aside-toggle {
     transform: rotate(180deg) translateY(50%);
+}
+
+@media screen and (max-width: 900px) {
+    aside {
+        display: none;
+    }
 }
