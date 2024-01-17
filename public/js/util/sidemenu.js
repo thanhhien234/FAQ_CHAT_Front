@@ -6,9 +6,10 @@ let mobileActiveList = $(".mobile-menus > .active");
 const listRightContent = $("li > .aside-menus-item-right");
 const chatbotContainer = $(".chatbot-message-container");
 const instructorContainer = $(".instructor-message-container");
-const fileContainer = $(".file-container");
+const fileContainer = $(".file-wrap");
 const blindContainer = $(".chat-blind-container")
 const inputChatContainer = $(".input-chat-container")
+
 
 // Mobile Menus
 const mobileMenuList = $(".mobile-menus > li");
@@ -30,26 +31,23 @@ menuList.on("click", function (e) {
     mobileActiveList.removeClass("active");
     switch (activeList.attr("id")) {
         case "chatbot-menu":
-            $("#chatbot-menu img").attr("src", "../public/assets/icon/Message_white.png");
-            $("#mobile-chatbot-menu img").attr("src", "../public/assets/icon/Message_white.png");
-            fileContainer.hide();
+            $("#chatbot-menu img").attr("src", "/public/assets/icon/Message_white.png");
+            $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message_white.png");
             break;
         case "instructor-menu":
-            $("#instructor-menu img").attr("src", "../public/assets/icon/Person_white.png");
-            $("#mobile-instructor-menu img").attr("src", "../public/assets/icon/Person_white.png");
-            fileContainer.hide();
+            $("#instructor-menu img").attr("src", "/public/assets/icon/Person_white.png");
+            $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person_white.png");
             break;
         case "files-menu":
-            $("#files-menu img").attr("src", "../public/assets/icon/file_icon.png");
-            $("#mobile-files-menu img").attr("src", "../public/assets/icon/file_icon.png");
-            fileContainer.hide();
+            $("#files-menu img").attr("src", "/public/assets/icon/file_icon.png");
+            $("#mobile-files-menu img").attr("src", "/public/assets/icon/file_icon.png");
             break;
     }
     $(e.currentTarget).addClass("active");
     switch ($(e.currentTarget).attr("id")) {
         case "chatbot-menu":
-            $("#chatbot-menu img").attr("src", "../public/assets/icon/Message.png");
-            $("#mobile-chatbot-menu img").attr("src", "../public/assets/icon/Message.png");
+            $("#chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
+            $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
             $("#mobile-chatbot-menu").addClass("active");
             chatbotContainer.show();
             blindContainer.show();
@@ -58,8 +56,8 @@ menuList.on("click", function (e) {
             fileContainer.hide();
             break;
         case "instructor-menu":
-            $("#instructor-menu img").attr("src", "../public/assets/icon/Person.png");
-            $("#mobile-instructor-menu img").attr("src", "../public/assets/icon/Person.png");
+            $("#instructor-menu img").attr("src", "/public/assets/icon/Person.png");
+            $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person.png");
             $("#mobile-instructor-menu").addClass("active");
             instructorContainer.show();
             blindContainer.show();
@@ -68,8 +66,8 @@ menuList.on("click", function (e) {
             fileContainer.hide();
             break;
         case "files-menu":
-            $("#files-menu img").attr("src", "../public/assets/icon/file_selected_icon.png");
-            $("#mobile-files-menu img").attr("src", "../public/assets/icon/file_selected_icon.png");
+            $("#files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
+            $("#mobile-files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
             $("#mobile-files-menu").addClass("active");
             chatbotContainer.hide();
             instructorContainer.hide();
@@ -88,29 +86,31 @@ mobileMenuList.on("click", function (e) {
     mobileActiveList.removeClass("active");
     switch (activeList.attr("id")) {
         case "mobile-chatbot-menu":
-            $("#mobile-chatbot-menu img").attr("src", "../public/assets/icon/Message_white.png");
+            $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message_white.png");
             break;
         case "mobile-instructor-menu":
-            $("#mobile-instructor-menu img").attr("src", "../public/assets/icon/Person_white.png");
+            $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person_white.png");
             break;
         case "mobile-files-menu":
-            $("#mobile-files-menu img").attr("src", "../public/assets/icon/file_icon.png");
+            $("#mobile-files-menu img").attr("src", "/public/assets/icon/file_icon.png");
             break;
     }
     $(e.currentTarget).addClass("active");
     switch ($(e.currentTarget).attr("id")) {
         case "mobile-chatbot-menu":
-            $("#mobile-chatbot-menu img").attr("src", "../public/assets/icon/Message.png");
+            $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
             $("#chatbot-menu").click();
             break;
         case "mobile-instructor-menu":
-            $("#mobile-instructor-menu img").attr("src", "../public/assets/icon/Person.png");
+            $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person.png");
             $("#instructor-menu").click();
             break;
         case "mobile-files-menu":
-            $("#mobile-files-menu img").attr("src", "../public/assets/icon/file_selected_icon.png");
+            $("#mobile-files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
             $("#files-menu").click();
             break;
     }
     mobileActiveList = $(".mobile-menus > .active");
 })
+
+

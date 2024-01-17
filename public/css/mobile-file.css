@@ -1,0 +1,78 @@
+.mobile-file-container{
+    width: 80%;
+    background-color: #FCD9DC;
+    margin: 70px auto;
+    display: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.mobile-file-container thead tr {
+    background-color: rgba(0, 24, 50, 0.1);
+    color: #000;
+    font-size: 14px;
+    height: 30px;
+}
+
+.mobile-file-container tr th:nth-child(2) {
+    padding: 10px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.mobile-file-container tr th:nth-child(3) {
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.mobile-file-container td {
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+.mobile-file-container td:nth-child(1) {
+    color: #001832;
+    font-size: 14px;
+    width: 15%;
+    text-align: center;
+}
+
+.mobile-file-container td:nth-child(2) {
+    text-align: left;
+    width: 65%;
+}
+.mobile-file-container td:nth-child(3) {
+    text-align: center;
+    width: 20%;
+}
+
+.mobile-file-container .file-info div {
+    font-size: 14px;
+    color: #001832;
+}
+
+.mobile-file-container .file-info div:last-child {
+    font-size: 10px;
+    color: rgba(38, 64, 93, 0.6);
+}
+
+.mobile-file-container tr:not(:last-child) {
+    position: relative;
+}
+
+.mobile-file-container tr:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 6%;
+    bottom: 0;
+    border-bottom: 2px solid rgba(38, 64, 93, 0.1);;
+}
+
+/* mobile screen */
+@media screen and (max-width: 900px) {
+    .mobile-file-container{
+        display: block;
+    }
+}

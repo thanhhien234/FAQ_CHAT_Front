@@ -1,48 +1,49 @@
 .file-container {
     width: 80%;
     margin: 40px auto;
+    display: block;
 }
 
 table {
     width: 100%;
 }
 
-thead{
+.file-container thead{
     background-color: rgba(0, 24, 50, 0.1);
     font-size: 16px;
     color: #001832;
 }
-th{
+.file-container th{
     padding: 10px;
     height: 30px;
 }
-td {
+.file-container td {
     padding: 10px;
     height: 60px;
 }
 
-th:first-child{
+.file-container th:first-child{
     text-align: center;
     border-radius: 20px 0 0 20px;
 }
-th:last-child{
+.file-container th:last-child{
     text-align: center;
     border-radius: 0 20px 20px 0;
 }
 
-th:nth-child(2),
-th:nth-child(3) {
+.file-container th:nth-child(2),
+.file-container th:nth-child(3) {
     text-align: left;
 }
 
-td:nth-child(1){
+.file-container td:nth-child(1){
     color: #000;
     font-size: 14px;
     text-align: center;
     width: 10%;
 }
 
-td:nth-child(2) {
+.file-container td:nth-child(2) {
     color: #000;
     font-size: 14px;
     width: 50%;
@@ -50,18 +51,18 @@ td:nth-child(2) {
 }
 
 
-td:nth-child(3) {
+.file-container td:nth-child(3) {
     color: rgba(38, 64, 93, 0.6);
     font-size: 14px;
     text-align: left;
     width: 30%;
 }
-td:nth-child(4) {
+.file-container td:nth-child(4) {
     text-align: center;
 }
 
 .download-button {
-    background: url('../assets/icon/downloadButton.png');
+    background: url('/public/assets/icon/downloadButton.png');
     background-size: cover;
     border: none;
     width: 30px;
@@ -74,9 +75,16 @@ td:nth-child(4) {
 }
 
 
-tr { 
+.file-container tr { 
     border-bottom: 1px solid #CAD4DF;
 }
-thead tr {
+.file-container thead tr {
     border-bottom: none; 
 }
+
+@media screen and (max-width: 900px) {
+    .file-container {
+        display: none
+    }
+}
+  
