@@ -88,7 +88,7 @@
     max-width: 50%;
     margin-top: auto;
     width: fit-content;
-    margin-bottom: 10px;
+    word-wrap: break-word;
 }
 .question-container{
     margin-left: auto;
@@ -121,6 +121,7 @@
 .question-time-container {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 3vh;
 }
 
 .time {

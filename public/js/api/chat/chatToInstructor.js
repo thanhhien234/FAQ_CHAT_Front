@@ -1,3 +1,4 @@
+//학생이 교수에게 질문 작성
 async function chatToInstructor(comment) {
     await $.ajax({
         url: config.chatServer + "/api/student",
@@ -12,6 +13,7 @@ async function chatToInstructor(comment) {
 
         success: function (res) {
             console.log(res);
+            searchChat()
         },
         error: function (err) {
             console.error(err);
