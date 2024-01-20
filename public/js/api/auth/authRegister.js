@@ -13,7 +13,7 @@ async function authRegister(studentId, name, email) {
         contentType: 'application/json; charset=utf-8',
         
         success: function(response) {
-            console.log('Register Success:', studentId, name, email);
+            location.href = "/";
         },
         error: function(err) {
             console.error(err);
