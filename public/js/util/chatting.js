@@ -1,12 +1,21 @@
+let isChatbotResponse = false;
 function sendMessage() {
     var message = $("#messageInput").val();
     if (message.trim() !== "") {
-        var container;
-
         if ($(".chatbot-message-container").is(":visible")) {
-            container = $(".chatbot-message-container");
+            if (!isChatbotResponse) {
+                $("#messageInput").prop("disabled", true);
+                $("#submit").prop("disabled", true);
+                isChatbotResponse = true;
+
+                chatToChatbot(message).then(() => {
+                    $("#messageInput").prop("disabled", false);
+                    $("#submit").prop("disabled", false);
+                    isChatbotResponse = false;
+                    $("#messageInput").focus();
+                }); 
+            }       
         } else if ($(".instructor-message-container").is(":visible")) {
-            container = $(".instructor-message-container");
             chatToInstructor(message)
         }
     }
@@ -23,3 +32,13 @@ $("#messageInput").on("keydown", function (e) {
         $("#messageInput").val("");
     }
 });
+
+
+function greeting() {
+    const greetingMessage = "안녕하세요! 궁금한 것이 있으신가요?<br>아래 입력창에 질문해주세요.";
+    const greetingContainer = $('<div class="answer-container">');
+    const greeting = $('<div class="answer">').html(greetingMessage);
+    greetingContainer.append(greeting);
+    $('.chatbot-message-container').append(greetingContainer);
+}
+greeting();
