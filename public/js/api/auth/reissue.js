@@ -8,6 +8,11 @@ async function reissue() {
         success: function (res) {
             setCookie("accessToken", res.accessToken, 2 * 60);
             setCookie("refreshToken", res.refreshToken, 24 * 14 * 60);
+            if (res.registerStateEnum === "INACTIVE") {
+                location.replace("/register");
+            } else {
+                location.reload();
+            }
         },
         error: function (err) {
             console.error(err);
