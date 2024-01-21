@@ -50,6 +50,7 @@ menuList.on("click", function (e) {
             $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
             $("#mobile-chatbot-menu").addClass("active");
             chatbotContainer.show();
+            chatbotContainer.scrollTop(chatbotContainer[0].scrollHeight); //scroll to bottom
             blindContainer.show();
             instructorContainer.hide();
             inputChatContainer.show();
@@ -60,6 +61,7 @@ menuList.on("click", function (e) {
             $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person.png");
             $("#mobile-instructor-menu").addClass("active");
             instructorContainer.show();
+            instructorContainer.scrollTop(instructorContainer[0].scrollHeight); //scroll to bottom
             blindContainer.show();
             inputChatContainer.show();
             chatbotContainer.hide();
