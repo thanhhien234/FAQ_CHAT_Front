@@ -21,6 +21,14 @@ async function chatToChatbot(question) {
         },
         error: function (err) {
             console.error(err);
+            errorMessage();
         }
     })
+}
+function errorMessage(){
+    const errorMessage = "서버 오류입니다. 잠시 후 다시 시도해주세요.";
+    const errorContainer = $('<div class="answer-container">');
+    const error = $('<div class="answer">').html(errorMessage);
+    errorContainer.append(error);
+    $('.chatbot-message-container').append(errorContainer);
 }
