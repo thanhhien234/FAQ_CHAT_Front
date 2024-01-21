@@ -9,7 +9,7 @@ async function fileListSearch(page, pageSize) {
             Authorization: "Bearer " + getCookie("accessToken")
         },
         success: function (res) {
-            console.log('file:',res);
+            resData = res
             const totalPages = Math.ceil(res.fileCount / pageSize);
 
             /* large screen */
@@ -29,7 +29,7 @@ async function fileListSearch(page, pageSize) {
                         <td>${index + 1 + pageSize * currentPage}</td>
                         <td>${file.name}</td>
                         <td>${formattedDate}</td>
-                        <td><button class="download-button" data-fileId="${file.id}"></button></td>
+                        <td><button class="download-button" data-fileid="${file.id}"></button></td>
                     </tr>
                 `);
             });
@@ -55,7 +55,7 @@ async function fileListSearch(page, pageSize) {
                                 <div>${formattedDate}</div>
                             </div>
                         </td>
-                        <td><button class="download-button" data-fileId="${file.id}"></button></td>
+                        <td><button class="download-button" data-fileid="${file.id}"></button></td>
                     </tr>
                 `);
             });
