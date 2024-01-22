@@ -122,10 +122,6 @@ html {
     display: none;
 }
 
-.agree-box * {
-    flex: none;
-}
-
 .agree-box p {
     font-size: 14px;
     font-weight: 400;
@@ -139,4 +135,21 @@ html {
     font-weight: 400;
     border: none;
     border-radius: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        background: none;
+    }
+
+    .main-container {
+        background: none;
+        padding: 0;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 100%;
+        max-width: none;
+    }
 }
