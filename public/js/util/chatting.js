@@ -23,13 +23,13 @@ function sendMessage() {
 
 $("#submit").on("click", function () {
     sendMessage();
+    $("#messageInput").val("");
 });
 
 $("#messageInput").on("keydown", function (e) {
     if (e.key === "Enter") {
         e.preventDefault();
-        sendMessage();
-        $("#messageInput").val("");
+        $("#submit").click();
     }
 });
 
