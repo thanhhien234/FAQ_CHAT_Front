@@ -8,7 +8,7 @@ function sendMessage() {
                 $("#submit").prop("disabled", true);
                 isChatbotResponse = true;
 
-                chatToChatbot(message).then(() => {
+                chatToChatbot(message).finally(() => {
                     $("#messageInput").prop("disabled", false);
                     $("#submit").prop("disabled", false);
                     isChatbotResponse = false;
