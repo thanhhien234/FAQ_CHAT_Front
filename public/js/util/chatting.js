@@ -16,7 +16,13 @@ function sendMessage() {
                 }); 
             }       
         } else if ($(".instructor-message-container").is(":visible")) {
-            chatToInstructor(message)
+            $("#messageInput").prop("disabled", true);
+            $("#submit").prop("disabled", true);
+            chatToInstructor(message).finally(() => {
+                $("#messageInput").prop("disabled", false);
+                $("#messageInput").focus();
+                $("#submit").prop("disabled", false);
+            })
         }
     }
 }
