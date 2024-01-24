@@ -9,5 +9,6 @@ $(document).on("click", ".download-button", function () {
         console.log('download sucess',fileData.fileName)
     } else {
         console.error("File not found: ", fileId);
+        alert("파일을 찾을 수 없습니다.");
     }
 });
