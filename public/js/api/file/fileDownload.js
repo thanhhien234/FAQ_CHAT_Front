@@ -1,4 +1,6 @@
 async function fileDownload(fileId, fileName) {
+    $('#loadingModal').modal('show');
+
     await $.ajax({
         url: config.fileServer + "/api/file/" + fileId,
         type: "GET",
@@ -11,6 +13,7 @@ async function fileDownload(fileId, fileName) {
             a.href = window.URL.createObjectURL(file);
             a.download = fileName;
             a.click();
+            $('#loadingModal').modal('hide');
         },
         error: function (err) {
             console.error(err);
