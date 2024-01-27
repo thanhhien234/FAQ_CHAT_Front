@@ -8,7 +8,7 @@ async function chatToChatbot(question) {
     chatbotContainer.append(loadingContainer);
 
     await $.ajax({
-        url: config.chatServer + '/chat?question=' + question,
+        url: config.chatServer + '/api/chat?question=' + question,
         type: "GET",
         contentType: 'application/json; charset=utf-8',
         headers: {
