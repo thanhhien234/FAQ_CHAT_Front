@@ -12,7 +12,6 @@ async function chatToInstructor(comment) {
         }),
 
         success: function (res) {
-            console.log(res);
             searchChat()
         },
         error: function (err) {
