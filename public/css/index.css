@@ -1,5 +1,5 @@
-/* input-chat-container */
-.input-chat-container {
+/* input-chat-wrapper */
+.input-chat-wrapper {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -44,8 +44,8 @@
   height: 30px; 
 }
 
-/* chat blind container */
-.chat-blind-container {
+/* chat blind wrapper */
+.chat-blind-wrapper {
     position: fixed;
     top: 0;
     right: 0;
@@ -55,9 +55,9 @@
     z-index: 1; 
   }
 
-/* message container */
-.instructor-message-container,
-.chatbot-message-container {
+/* message wrapper */
+.instructor-wrapper,
+.chatbot-wrapper {
   flex: 1; 
   overflow-y: auto;
   background-color: #fff;
@@ -67,30 +67,30 @@
   flex-direction: column; 
 }
 
-.chatbot-message-container::-webkit-scrollbar {
+.chatbot-wrapper::-webkit-scrollbar {
   width: 0.5em;
 }
 
-.chatbot-message-container::-webkit-scrollbar-thumb {
+.chatbot-wrapper::-webkit-scrollbar-thumb {
   background-color: transparent; 
 }
-.instructor-message-container::-webkit-scrollbar {
+.instructor-wrapper::-webkit-scrollbar {
   width: 0.5em;
 }
 
-.instructor-message-container::-webkit-scrollbar-thumb {
+.instructor-wrapper::-webkit-scrollbar-thumb {
   background-color: transparent; 
 }
 
 
-.question-container,
-.answer-container {
+.question-wrapper,
+.answer-wrapper {
     max-width: 50%;
     margin-top: auto;
     width: fit-content;
     word-wrap: break-word;
 }
-.question-container{
+.question-wrapper{
     margin-left: auto;
 }
 .question {
@@ -109,16 +109,16 @@
     font-size: 14px;
     margin-bottom: 5px;
 }
-.answer-container:first-child {
+.answer-wrapper:first-child {
   margin-top: 12vh; 
 }
-.question-container:first-child {
+.question-wrapper:first-child {
   margin-top: 12vh;
   margin-bottom: 10px;
 }
 
-/* time container */
-.question-time-container {
+/* time wrapper */
+.question-time-wrapper {
   display: flex;
   justify-content: flex-end;
 }
@@ -143,12 +143,12 @@
 
 /* mobile screen */
 @media screen and (max-width: 900px) {
-  .question-container,
-  .answer-container {
+  .question-wrapper,
+  .answer-wrapper {
     max-width: 80%;
   }
-  .instructor-message-container,
-  .chatbot-message-container {
+  .instructor-wrapper,
+  .chatbot-wrapper {
     width: 90%;
   }
   .input-chat-inner {
@@ -156,7 +156,7 @@
     padding: 2px;
     width: 90%;
   }
-  .input-chat-container{
+  .input-chat-wrapper{
     height: 10%;
   }
 }

@@ -4,11 +4,11 @@ const menuList = $(".aside-menus > li");
 let activeList = $(".aside-menus > .active");
 let mobileActiveList = $(".mobile-menus > .active");
 const listRightContent = $("li > .aside-menus-item-right");
-const chatbotContainer = $(".chatbot-message-container");
-const instructorContainer = $(".instructor-message-container");
-const fileContainer = $(".file-wrap");
-const blindContainer = $(".chat-blind-container")
-const inputChatContainer = $(".input-chat-container")
+const chatbotWrapper = $(".chatbot-wrapper");
+const instructorWrapper = $(".instructor-wrapper");
+const fileContainer = $(".file-container");
+const blindWrapper = $(".chat-blind-wrapper")
+const inputChatWrapper = $(".input-chat-wrapper")
 
 
 // Mobile Menus
@@ -49,32 +49,32 @@ menuList.on("click", function (e) {
             $("#chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
             $("#mobile-chatbot-menu img").attr("src", "/public/assets/icon/Message.png");
             $("#mobile-chatbot-menu").addClass("active");
-            chatbotContainer.show();
-            chatbotContainer.scrollTop(chatbotContainer[0].scrollHeight); //scroll to bottom
-            blindContainer.show();
-            instructorContainer.hide();
-            inputChatContainer.show();
+            chatbotWrapper.show();
+            chatbotWrapper.scrollTop(chatbotWrapper[0].scrollHeight); //scroll to bottom
+            blindWrapper.show();
+            instructorWrapper.hide();
+            inputChatWrapper.show();
             fileContainer.hide();
             break;
         case "instructor-menu":
             $("#instructor-menu img").attr("src", "/public/assets/icon/Person.png");
             $("#mobile-instructor-menu img").attr("src", "/public/assets/icon/Person.png");
             $("#mobile-instructor-menu").addClass("active");
-            instructorContainer.show();
-            instructorContainer.scrollTop(instructorContainer[0].scrollHeight); //scroll to bottom
-            blindContainer.show();
-            inputChatContainer.show();
-            chatbotContainer.hide();
+            instructorWrapper.show();
+            instructorWrapper.scrollTop(instructorWrapper[0].scrollHeight); //scroll to bottom
+            blindWrapper.show();
+            inputChatWrapper.show();
+            chatbotWrapper.hide();
             fileContainer.hide();
             break;
         case "files-menu":
             $("#files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
             $("#mobile-files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
             $("#mobile-files-menu").addClass("active");
-            chatbotContainer.hide();
-            instructorContainer.hide();
-            blindContainer.hide();
-            inputChatContainer.hide();
+            chatbotWrapper.hide();
+            instructorWrapper.hide();
+            blindWrapper.hide();
+            inputChatWrapper.hide();
             fileContainer.show();
             break;
     }

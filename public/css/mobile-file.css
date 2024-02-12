@@ -1,4 +1,4 @@
-.mobile-file-container{
+.mobile-file-wrapper{
     width: 90%;
     height: 100vh;
     background-color: #FCD9DC;
@@ -8,62 +8,62 @@
     margin-top: 15%;
     padding-bottom: 5%;
 }
-.mobile-file-container table {
+.mobile-file-wrapper table {
     width: 100%; 
 }
-.mobile-file-container thead tr {
+.mobile-file-wrapper thead tr {
     background-color: rgba(0, 24, 50, 0.1);
     color: #000;
     font-size: 14px;
 }
-.mobile-file-container tr th:nth-child(2) {
+.mobile-file-wrapper tr th:nth-child(2) {
     padding: 10px;
     text-align: left;
     font-weight: normal;
 }
 
-.mobile-file-container tr th:nth-child(3) {
+.mobile-file-wrapper tr th:nth-child(3) {
     padding: 10px;
     text-align: center;
     font-weight: normal;
 }
 
-.mobile-file-container td {
+.mobile-file-wrapper td {
     padding: 10px;
     text-align: center;
     height: 6vh;
 }
 
-.mobile-file-container td:nth-child(1) {
+.mobile-file-wrapper td:nth-child(1) {
     color: #001832;
     font-size: 14px;
     width: 15%;
     text-align: center;
 }
 
-.mobile-file-container td:nth-child(2) {
+.mobile-file-wrapper td:nth-child(2) {
     text-align: left;
 }
-.mobile-file-container td:nth-child(3) {
+.mobile-file-wrapper td:nth-child(3) {
     text-align: center;
     width: 25%;
 }
 
-.mobile-file-container .file-info div {
+.mobile-file-wrapper .file-info div {
     font-size: 14px;
     color: #001832;
 }
 
-.mobile-file-container .file-info div:last-child {
+.mobile-file-wrapper .file-info div:last-child {
     font-size: 10px;
     color: rgba(38, 64, 93, 0.6);
 }
 
-.mobile-file-container tr{
+.mobile-file-wrapper tr{
     position: relative;
 }
 
-.mobile-file-container tr:after {
+.mobile-file-wrapper tr:after {
     content: "";
     position: absolute;
     left: 15%;
@@ -89,7 +89,7 @@
 }
 /* mobile screen */
 @media screen and (max-width: 900px) {
-    .mobile-file-container{
+    .mobile-file-wrapper {
         display: block;
     }
 }
