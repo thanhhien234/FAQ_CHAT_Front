@@ -6,6 +6,7 @@ async function fileListSearch(page, pageSize) {   //search all files
             Authorization: "Bearer " + getCookie("accessToken")
         },
         success: function (res) {
+            resData = res
             renderFileTableData(res)
         },
         error: function (err) {

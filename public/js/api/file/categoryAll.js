@@ -32,7 +32,6 @@ async function categoryAllSearch() {
             Authorization: "Bearer " + getCookie("accessToken")
         },
         success: function (res) {
-            console.log('data:',res)
             renderFileTableData(res);  //into main screen select
             renderCategorySelect(res);  //into category select
         }, 
