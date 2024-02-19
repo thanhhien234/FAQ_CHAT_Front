@@ -124,11 +124,18 @@
       
       
     <div class="file-container"> 
+      <div class="category-select-wrapper">
+        <select id="categorySelect" onchange="handleCategoryChange()">
+            <option value="all" selected>최근 게시된 순으로 보기</option>
+            <!-- <option value="category"></option> -->
+        </select>
+      </div>
       <div class="file-wrapper"> 
         <table id="fileTable">
           <thead>
               <tr>
                   <th>순서</th>
+                  <th>카테고리</th>
                   <th>제목</th>
                   <th>게시일</th>
                   <th>다운로드</th>
@@ -197,5 +204,10 @@
   <script src="/public/js/api/chat/chatToChatbot.js"></script>
   <script src="/public/js/util/downloadFile.js"></script>
   <script src="/public/js/api/file/fileDownload.js"></script>
+  <script src="/public/js/util/fileTableData.js"></script>
+  <script src="/public/js/util/category.js"></script>
+  <script src="/public/js/api/file/categoryAll.js"></script>
+  <script src="/public/js/api/file/categorySearch.js"></script>
+  <script src="/public/js/util/searchCategory.js"></script>
   </body>
 </html>

@@ -1,31 +1,36 @@
 .mobile-file-wrapper{
-    width: 90%;
-    height: 100vh;
+    width: 100%;
+    height: 80vh;
     background-color: #FCD9DC;
     display: none;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 15%;
-    padding-bottom: 5%;
 }
-.mobile-file-wrapper table {
-    width: 100%; 
+.mobile-file-wrapper #mobile-fileTable {
+    width: 100%;
+    height: 100%;
 }
+
 .mobile-file-wrapper thead tr {
     background-color: rgba(0, 24, 50, 0.1);
     color: #000;
     font-size: 14px;
 }
+.mobile-file-wrapper tr th:nth-child(1) {
+    width: 15%;
+}
 .mobile-file-wrapper tr th:nth-child(2) {
     padding: 10px;
     text-align: left;
     font-weight: normal;
+    width: 60%;
 }
 
 .mobile-file-wrapper tr th:nth-child(3) {
     padding: 10px;
     text-align: center;
     font-weight: normal;
+    width: 25%;
 }
 
 .mobile-file-wrapper td {
@@ -43,6 +48,15 @@
 
 .mobile-file-wrapper td:nth-child(2) {
     text-align: left;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.mobile-file-wrapper td:nth-child(2) div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .mobile-file-wrapper td:nth-child(3) {
     text-align: center;
@@ -72,24 +86,56 @@
     border-bottom: 2px solid rgba(38, 64, 93, 0.1);;
 }
 
-/*paging button*/
-.myMobilePaging {
-    text-align: center;
+.mobile-file-wrapper #mobile-fileTable {
+    width: 100%;
+    height: 100%;
 }
-.mobilePageButton {
-    background-color: transparent;
-    color: #000;
+.mobile-file-wrapper #mobile-fileTable tbody{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90%;
+    display: block;
+}
+.mobile-file-wrapper #mobile-fileTable tbody::-webkit-scrollbar {
+    display: none;
+}
+.mobile-file-wrapper #mobile-fileTable thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.mobile-file-wrapper tbody tr:last-child {
+    margin-bottom: 40px;
+}
+/*category */
+.mobile-file-wrapper .category-name {
+    border-radius: 6px;
+    padding: 2px 10px;
     font-size: 14px;
-    border: none;
-    text-decoration: none;
-}
-.mobilePageButton.current {
-    text-decoration: underline;
-    font-weight: bold;
 }
 /* mobile screen */
 @media screen and (max-width: 900px) {
+    .main-content-container {
+        margin: 30px auto;
+        justify-content: center;
+        padding: 0;
+    }
+    .category-select-wrapper {
+        justify-content: flex-start;
+        margin-left: 13%;
+    }
+    .file-container {
+        width: 90%;
+    }
     .mobile-file-wrapper {
         display: block;
+    }
+    #categorySelect{
+        background-color: #FCD9DC;
+        border: none;
+        padding: 5px 20px;
+    }
+    #categorySelect option {
+        background-color: rgba(0, 24, 50, 0.1); 
     }
 }
