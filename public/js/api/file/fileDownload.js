@@ -7,10 +7,13 @@ async function fileDownload(fileId, fileName) {
         headers: {
             Authorization: "Bearer " + getCookie("accessToken")
         },
+        xhrFields: {
+            responseType: "blob",
+        },
         success: function (res) {
-            const file = new Blob([res]);
+            const blobURL = URL.createObjectURL(res);
             const a = document.createElement("a");
-            a.href = window.URL.createObjectURL(file);
+            a.href = blobURL;
             a.download = fileName;
             a.click();
             $('#loadingModal').modal('hide');
