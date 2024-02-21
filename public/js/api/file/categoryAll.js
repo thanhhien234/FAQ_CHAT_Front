@@ -36,10 +36,8 @@ async function categoryAllSearch() {
             renderCategorySelect(res);  //into category select
         }, 
         error: function (err) {
-            console.error(err);
+            alert('파일 조회 중 오류가 발생했습니다.');
         }
     });
 }
-
-categoryAllSearch()
 

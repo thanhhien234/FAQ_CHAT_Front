@@ -6,4 +6,6 @@ async function loginCheck() {
     }
 }
 
-loginCheck();
+loginCheck().then(() => {
+    $("#chatbot-menu").trigger("click"); //initially
+});
