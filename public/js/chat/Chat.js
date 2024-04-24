@@ -151,6 +151,10 @@ class Chat {
     sendMessage() {
         var message = $("#messageInput").val();
         if (message.trim() !== "") {
+            if (message.length > 500) {
+                alert("질문은 500자를 초과할 수 없습니다.");
+                return;
+            }
             if ($(".chatbot-wrapper").is(":visible")) {
                 if (!this.isChatbotResponse) {
                     $("#messageInput").prop("disabled", true);
