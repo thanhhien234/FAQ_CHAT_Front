@@ -14,6 +14,11 @@ const inputChatWrapper = $(".input-chat-wrapper")
 // Mobile Menus
 const mobileMenuList = $(".mobile-menus > li");
 
+// Initialize
+$(document).ready(function() {
+    $("#chatbot-menu").click();
+});
+
 toggleBtn.on("click", function () {
     if (sideBar.hasClass('close')) {
         sideBar.removeClass('close');
@@ -66,7 +71,7 @@ menuList.on("click", function (e) {
             inputChatWrapper.show();
             chatbotWrapper.hide();
             fileContainer.hide();
-            searchChat();
+            chat.renderChat();
             break;
         case "files-menu":
             $("#files-menu img").attr("src", "/public/assets/icon/file_selected_icon.png");
