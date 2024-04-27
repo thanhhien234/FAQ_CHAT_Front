@@ -81,9 +81,9 @@ menuList.on("click", function (e) {
             instructorWrapper.hide();
             blindWrapper.hide();
             inputChatWrapper.hide();
-            fileContainer.show();
             category.renderCategory()
             .then(() => {
+                fileContainer.show();
                 $("#categorySelect").val("all");
                 $("#categorySelect").change();
             });
