@@ -17,6 +17,12 @@ const mobileMenuList = $(".mobile-menus > li");
 // Initialize
 $(document).ready(function() {
     $("#chatbot-menu").click();
+    if ($(window).width() < 900) { 
+        let categorySelectWrapper = $('.category-select-wrapper').detach();
+        $('#mobile-fileTable').find('thead').after('<div class="gap"></div>', categorySelectWrapper);
+    } else {
+        $('.category-select-wrapper').insertBefore('.file-wrapper');
+    }
 });
 
 toggleBtn.on("click", function () {
