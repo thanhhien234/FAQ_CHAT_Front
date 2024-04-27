@@ -82,7 +82,7 @@ menuList.on("click", function (e) {
             blindWrapper.hide();
             inputChatWrapper.hide();
             fileContainer.show();
-            categoryAllSearch()
+            category.renderCategory()
             .then(() => {
                 $("#categorySelect").val("all");
                 $("#categorySelect").change();
