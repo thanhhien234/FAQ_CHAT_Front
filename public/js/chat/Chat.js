@@ -22,9 +22,11 @@ class Chat {
                 Authorization: "Bearer " + getCookie("accessToken")
             },
             success: function (res) {
+                loadingContainer.remove();
                 const answerChatbotContainer = $('<div class="answer-wrapper">');
-                const answerChatbot = $('<div class="answer">').text(answer);
+                const answerChatbot = $('<div class="answer">').text(res);
                 answerChatbotContainer.append(answerChatbot);
+                $('.chatbot-wrapper').append(answerChatbotContainer);
                 chatbotWrapper.scrollTop(chatbotWrapper[0].scrollHeight); //scroll to bottom
             },
             error: function (err) {

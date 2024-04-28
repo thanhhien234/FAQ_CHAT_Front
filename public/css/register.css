@@ -20,6 +20,7 @@ html {
     border-radius: 20px;
     background: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px;
@@ -29,7 +30,7 @@ html {
     width: 100%;
     max-width: 340px;
     height: 100%;
-    max-height: 500px;
+    max-height: 80vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -39,7 +40,8 @@ html {
     text-align: left;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .form-inner form {
@@ -84,6 +86,9 @@ html {
     width: 50%;
     display: inline-block;
 }
+input[type="number"] {
+    background-color: transparent
+}
 
 .code-box .time-remain {
     position: absolute;
@@ -116,11 +121,44 @@ html {
     background: #034EA2;
     color: white;
 }
-
-.agree-box {
-    margin-top: 24px;
+.information-box {
+    margin-top: 20px;
     margin-bottom: auto !important;
+}
+.information-box-title{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.information-box-title p{
+    color: #9399A0;
+    font-size: 14px;
+    margin: 0;
+}
+.active p{
+    color: #001832;
+}
+.active img{
+    content: url('/public/assets/icon/expand_more_up.png');
+}
+.information-box-title img {
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+}
+.information-box-content{
+    text-align: left;
+    border-bottom: 16px solid #E6E8EB;
+    display: none;
+}
+.information-box-content p{
+    margin: 0;
+    font-size: 12px;
+}
+.agree-box {
+    float: right;
+    margin-top: 20px;
+    display: none;
 }
 
 .agree-box #agree-check {
@@ -133,6 +171,12 @@ html {
     color: #9399A0;
 }
 
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
 #submit-btn {
     background: #034EA2;
     color: white;
@@ -140,6 +184,33 @@ html {
     font-weight: 400;
     border: none;
     border-radius: 30px;
+    flex: 1;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#cancel-btn {
+    background-color: #E6E8EB;
+    color: #001832;
+    padding: 12px;
+    font-weight: 400;
+    border: none;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.form-footer {
+    width: 100%;
+    text-align: right;
+    margin-top: 4vh;
+}
+
+.form-footer p {
+    color: #7D8C9E;
+    font-size: 12px;
+    margin: 0;
 }
 
 @media screen and (max-width: 900px) {

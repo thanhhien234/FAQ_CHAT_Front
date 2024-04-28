@@ -6,16 +6,5 @@ async function sendVerificationCode(email) {
             email: email
         }),
         contentType: 'application/json; charset=utf-8',
-        
-        success: function(response) {
-            console.log('Success:', response);
-            resolve(response); 
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('AJAX Error:', textStatus, errorThrown);
-            console.log('Response code:', jqXHR.status);
-            console.log('Response text:', jqXHR.responseText); 
-            reject(errorThrown);
-        }
     });
 }
