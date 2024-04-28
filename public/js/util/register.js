@@ -8,7 +8,11 @@ const agreeCheck = $("#agree-check");
 const agreeCheckLabel = $(".agree-box label");
 const checkImg = $(".agree-box label img");
 const submitBtn = $("#submit-btn");
+const cancelBtn = $("#cancel-btn");
 const sendLoading = $("#send-code-btn .spinner-border");
+const informationTitle = $(".information-box-title");
+const informationContent = $(".information-box-content");
+const agreeBox = $(".agree-box");
 
 // let nameState = false;
 let studentNumState = false;
@@ -129,4 +133,17 @@ submitBtn.click(function (e) {
                 alert("잘못된 인증번호입니다.")
             });
     }
+});
+cancelBtn.click(function (e) {
+    e.preventDefault();
+    deleteCookie("accessToken");
+    deleteCookie("refreshToken");
+    deleteCookie("isActive");
+    location.href = "/login.html";
+});
+
+informationTitle.click(function () {
+    $(this).toggleClass('active');
+    informationContent.toggle();
+    agreeBox.toggle();
 });
