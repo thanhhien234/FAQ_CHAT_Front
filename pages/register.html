@@ -59,15 +59,31 @@
 
             <p class="code-description">위의 학교 이메일로 인증번호가 발송됩니다.</p>
           </div>
-          <div class="agree-box">
-            <input id="agree-check" type="checkbox">
-            <label for="agree-check">
-              <img src="/public/assets/icon/Check.png" alt="">
-              모든 내용을 확인하였으며, 개인정보 수집에 동의합니다.
-            </label>
+          <div class="information-box">
+            <div class="information-box-title">
+              <p>개인정보 수집·이용 동의</p>
+              <img src="/public/assets/icon/expand_more_down.png" alt="">      
+            </div>
+            <div class="information-box-content">
+              <p>○○○은 ○○○서비스 회원가입, 고객상담 및 AS, 고지사항 전달 등을 위해 아래와 같이 정보를 수집합니다.</p>
+            </div>
+            <div class="agree-box">
+              <input id="agree-check" type="checkbox">
+              <label for="agree-check">
+                위 개인정보 수집·이용에 동의합니다
+                <img src="/public/assets/icon/Check.png" alt="">
+              </label>
+            </div>
           </div>
-          <button id="submit-btn" type="submit">가입</button>
+          <div class="button-wrapper">
+            <button id="cancel-btn" type="button">취소</button>
+            <button id="submit-btn" type="submit">가입</button>
+          </div>
         </form>
+        <div class="form-footer">
+          <hr>
+          <p>개인정보처리방침</p>
+        </div>
       </div>
     </div>
   </div>
