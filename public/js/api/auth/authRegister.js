@@ -13,11 +13,9 @@ async function authRegister(studentId, email) {
         
         success: function(response) {
             location.href = "/";
-            console.log('success authRegister');
         },
         error: function(err) {
-            console.log('failed authRegister');
-            console.log(err);
+            alert("서버오류입니다. 잠시 후 다시 시도해주세요.");
         }
     });
 }
