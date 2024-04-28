@@ -1,4 +1,4 @@
-async function authRegister(studentId, name, email) { 
+async function authRegister(studentId, email) { 
     await $.ajax({
         url: config.authServer +'/api/auth/register',
         type: 'POST',
@@ -7,7 +7,6 @@ async function authRegister(studentId, name, email) {
         },
         data: JSON.stringify({
             studentId: studentId,
-            name: name,
             email: email
         }),
         contentType: 'application/json; charset=utf-8',

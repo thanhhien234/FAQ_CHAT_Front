@@ -1,4 +1,4 @@
-const nameInput = $("#name-input");
+// const nameInput = $("#name-input");
 const studentNumInput = $("#student-num-input");
 const emailInput = $("#email-input");
 const codeInput = $("#code-input");
@@ -10,7 +10,7 @@ const checkImg = $(".agree-box label img");
 const submitBtn = $("#submit-btn");
 const sendLoading = $("#send-code-btn .spinner-border");
 
-let nameState = false;
+// let nameState = false;
 let studentNumState = false;
 let emailState = false;
 let codeState = false;
@@ -117,13 +117,13 @@ submitBtn.click(function (e) {
         alert("약관에 동의해주세요.");
     } else {
         const studentId = studentNumInput.val();
-        const name = nameInput.val();
+        // const name = nameInput.val();
         const email = emailInput.val();
         const code = codeInput.val();
 
         verifyCode(email, code)
             .then(() => {
-                authRegister(studentId, name, email);
+                authRegister(studentId, email);
             })
             .catch(() => {
                 alert("잘못된 인증번호입니다.")
