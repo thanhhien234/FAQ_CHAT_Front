@@ -9,6 +9,7 @@ if (!!loginCode) {
         success: function (res) {
             setCookie('accessToken', res.accessToken, accessTime);
             setCookie('refreshToken', res.refreshToken, refreshTime);
+            setCookie('isActive', res.registerStateEnum, accessTime);
             if (res.registerStateEnum === "INACTIVE")
                 window.location.href = '/register.html';
             else

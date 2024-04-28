@@ -9,6 +9,10 @@ html {
     padding: 20px;
 }
 
+.input-check {
+    display: none;
+}
+
 .form-container {
     width: 100%;
     max-width: 500px;
@@ -94,6 +98,7 @@ html {
     font-size: 12px;
     font-weight: 400;
     text-align: left;
+    display: none;
 }
 
 #send-code-btn {

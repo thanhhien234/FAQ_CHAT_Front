@@ -34,16 +34,16 @@ agreeCheckLabel.click(function () {
 
 agreeCheck.click();
 
-nameInput.on("change", function () {
-    const checkImg = $(".name-box .input-check");
-    if(nameInput.val().length > 0) {
-        nameState = true;
-        checkImg.show();
-    } else {
-        nameState = false;
-        checkImg.hide();
-    }
-})
+// nameInput.on("change", function () {
+//     const checkImg = $(".name-box .input-check");
+//     if(nameInput.val().length > 0) {
+//         nameState = true;
+//         checkImg.show();
+//     } else {
+//         nameState = false;
+//         checkImg.hide();
+//     }
+// })
 
 studentNumInput.on("change", function () {
     const checkImg = $(".student-num-box .input-check");
@@ -105,9 +105,9 @@ sendBtn.click(function (e) {
 
 submitBtn.click(function (e) {
     e.preventDefault();
-    if (!nameState) {
-        alert("이름을 입력해주세요.");
-    } else if (!studentNumState) {
+    // if (!nameState) {
+    //     alert("이름을 입력해주세요."); }
+    if (!studentNumState) {
         alert("학번을 입력해주세요.");
     } else if (!emailState) {
         alert("학교 이메일을 입력해주세요.");
