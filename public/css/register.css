@@ -86,6 +86,9 @@ html {
     width: 50%;
     display: inline-block;
 }
+input[type="number"] {
+    background-color: transparent
+}
 
 .code-box .time-remain {
     position: absolute;

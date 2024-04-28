@@ -1,4 +1,4 @@
-async function verifyCode(email,code) {
+async function verifyCode(email,code,studentId) {
     await $.ajax({
         url: config.emailServer +'/api/email/verification-code',
         type: 'PATCH',
@@ -7,12 +7,11 @@ async function verifyCode(email,code) {
             code: code
         }),
         contentType: 'application/json; charset=utf-8',
-        
         success: function(response) {
-            console.log('Success:', code);
+            authRegister(studentId, email);
         },
-        error: function(err) {
-            console.error(err);
+        error: () => {
+            alert("인증번호가 틀렸습니다. 다시 입력해주세요.")
         }
     });
 }

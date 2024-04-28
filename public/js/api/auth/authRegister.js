@@ -13,9 +13,11 @@ async function authRegister(studentId, email) {
         
         success: function(response) {
             location.href = "/";
+            console.log('success authRegister');
         },
         error: function(err) {
-            console.error(err);
+            console.log('failed authRegister');
+            console.log(err);
         }
     });
 }
