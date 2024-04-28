@@ -24,6 +24,7 @@ html {
     border-radius: 20px;
     background: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px;
@@ -31,7 +32,7 @@ html {
 
 .login-inner {
     height: 100%;
-    max-height: 400px;
+    max-height: 350px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -41,6 +42,8 @@ html {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: auto;
+    text-align: left;
+    align-self: center;
 }
 
 .login-inner #login-btn {
@@ -55,6 +58,11 @@ html {
     animation: blink 1s step-end infinite;
 }
 
+.login-footer {
+    font-size: 12px;
+    color: #7D8C9E;
+    margin-top: 50px;
+}
 @media screen and (max-width: 900px) {
     html {
         background: none;
