@@ -5,7 +5,7 @@ $('.file-container').on("click", '.download-button', function () {
     const fileData = category.currentCategoryData.find(file => file.fileId === fileId);
 
     if (fileData) {
-        file.downloadFile(fileId,fileData.fileName);
+        file.downloadFile(fileId,fileData.downloadName);
     } else {
         alert("파일을 찾을 수 없습니다.");
     }

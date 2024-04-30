@@ -63,6 +63,7 @@ class Category {
                         color: categoryColor,
                         fileId: file.id,
                         fileName: file.name,
+                        downloadName: file.fileName,
                         date: new Date(file.created_at).toLocaleDateString("ko-KR", {
                             year: "numeric",
                             month: "long",
