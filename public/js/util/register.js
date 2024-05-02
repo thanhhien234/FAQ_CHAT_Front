@@ -49,7 +49,7 @@ studentNumInput.on("change", function () {
 
 emailInput.on("change", function () {
     const checkImg = $(".email-box .input-check");
-    if (emailInput.val().endsWith('@stu.kmu.ac.kr')) {
+    if (emailInput.val().endsWith('@stu.kmu.ac.kr') || emailInput.val().endsWith('@kmu.kr')) {
         checkImg.show();
         emailState = true;
     } else {
