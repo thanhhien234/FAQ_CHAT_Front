@@ -13,6 +13,7 @@ class Chat {
         const spinnerText = $('<div class="answer">').append(spinner);
         loadingContainer.append(spinnerText)
         chatbotWrapper.append(loadingContainer);
+        chatbotWrapper.scrollTop(chatbotWrapper[0].scrollHeight);
     
         await $.ajax({
             url: config.chatServer + '/api/chat?question=' + question,
