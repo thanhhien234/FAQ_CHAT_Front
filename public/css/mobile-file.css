@@ -116,7 +116,6 @@
 /* mobile screen */
 @media screen and (max-width: 900px) {
     .main-content-container {
-        margin: 30px auto;
         justify-content: center;
         padding: 0;
     }

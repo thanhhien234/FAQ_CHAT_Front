@@ -7,9 +7,9 @@ const listRightContent = $("li > .aside-menus-item-right");
 const chatbotWrapper = $(".chatbot-wrapper");
 const instructorWrapper = $(".instructor-wrapper");
 const fileContainer = $(".file-container");
-const blindWrapper = $(".chat-blind-wrapper")
-const inputChatWrapper = $(".input-chat-wrapper")
-
+const blindWrapper = $(".chat-blind-wrapper");
+const inputChatWrapper = $(".input-chat-wrapper");
+const btnList = $(".btn-list-wrapper");
 
 // Mobile Menus
 const mobileMenuList = $(".mobile-menus > li");
@@ -30,10 +30,13 @@ toggleBtn.on("click", function () {
         sideBar.removeClass('close');
         setTimeout(function () {
             listRightContent.css("display", "flex");
+            btnList.css("display", "block");
         }, 500);
     } else {
         sideBar.addClass('close');
         listRightContent.css("display", "none");
+        btnList.css("display", "none");
+
     }
 })
 
@@ -89,7 +92,7 @@ menuList.on("click", function (e) {
             inputChatWrapper.hide();
             category.renderCategory()
             .then(() => {
-                fileContainer.show();
+                fileContainer.css("display", "flex");
                 $("#categorySelect").val("all");
                 $("#categorySelect").change();
             });
@@ -129,5 +132,9 @@ mobileMenuList.on("click", function (e) {
     }
     mobileActiveList = $(".mobile-menus > .active");
 })
+
+$('#logOutBtn').on('click', function() {
+    logout();
+});
 
 
