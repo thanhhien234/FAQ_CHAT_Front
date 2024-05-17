@@ -76,6 +76,17 @@
             </div>
           </li>
         </ul>
+        <div class="btn-list-wrapper">
+          <hr>
+          <ul class="btn-list">
+            <li>
+              <button id="logOutBtn">로그아웃</button>
+            </li>
+            <li>
+              <a href="" id="contactLink">문의하기</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </aside>
 
@@ -120,7 +131,7 @@
       
       <div class="input-chat-wrapper">
         <div class="input-chat-inner">
-          <textarea id="messageInput" placeholder="질문을 입력해주세요."></textarea>
+          <input type="text" id="messageInput" placeholder="질문을 입력해주세요.">
           <button type="submit" id="submit">
             <img src="/public/assets/icon/arrow_circle_up.png" class="up-arrow">
           </button>
@@ -145,7 +156,7 @@
                   <th>다운로드</th>
               </tr>
           </thead>
-          <tbody>
+          <tbody> 
               <!-- file row-->
           </tbody>
         </table>
@@ -207,5 +218,8 @@
   <script src="/public/js/file/File.js"></script>
   <script src="/public/js/file/fileController.js"></script>
   <script src="/public/js/util/sidemenu.js"></script>
+  <script>
+    document.getElementById('contactLink').href = 'mailto:' + config.mailAddress;
+  </script>
   </body>
 </html>
