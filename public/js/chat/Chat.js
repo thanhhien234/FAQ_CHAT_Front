@@ -3,6 +3,36 @@ class Chat {
         this.chatToInstructorContent = [];
         this.isChatbotResponse = false;
     }
+
+    async renderBotChat() {
+        getChatbotList()
+            .then((data) => {
+                if (data.length <= 0) {
+                    this.greeting();
+                    return ;
+                }
+
+                data.forEach((item) => {
+                    if (isQuestion) {
+                        const questionChatbotContainer = $('<div class="question-wrapper">');
+                        const questionChatbot = $('<div class="question">').text(item.message);
+                        questionChatbotContainer.append(questionChatbot);
+                        $('.chatbot-wrapper').append(questionChatbotContainer);
+                    } else {
+                        const loadingContainer = $('<div class="answer-wrapper">');
+                        const spinnerText = $('<div class="answer">').text(item.message);
+                        loadingContainer.append(spinnerText)
+                        $('.chatbot-wrapper').append(loadingContainer);
+                    }
+                })
+
+                $('.chatbot-wrapper').scrollTop(chatbotWrapper[0].scrollHeight);
+            })
+            .catch((error) => {
+                alert(error.message);
+            }) 
+    }
+
     async chatToChatbot(question) {
         const questionChatbotContainer = $('<div class="question-wrapper">');
         const questionChatbot = $('<div class="question">').text(question);
@@ -151,6 +181,7 @@ class Chat {
             }
         });
     }
+
     sendMessage() {
         var message = $("#messageInput").val();
         if (message.trim() !== "") {
